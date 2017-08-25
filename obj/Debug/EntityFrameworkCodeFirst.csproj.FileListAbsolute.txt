@@ -1,0 +1,12 @@
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFrameworkCodeFirst.exe.config
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFrameworkCodeFirst.exe
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFrameworkCodeFirst.pdb
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFramework.dll
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFramework.xml
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.csprojResolveAssemblyReference.cache
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.exe
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.pdb
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.Migrations.InitialModel.resources
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.csproj.GenerateResource.Cache
