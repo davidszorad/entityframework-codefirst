@@ -11,3 +11,4 @@ C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFramewo
 C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.Migrations.InitialModel.resources
 C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.csproj.GenerateResource.Cache
 C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.Migrations.AddCategoriesTable.resources
+C:\Dev\EntityFrameworkCodeFirst\EntityFrameworkCodeFirst\obj\Debug\EntityFrameworkCodeFirst.Migrations.AddCategoryColumnToCoursesTable.resources
