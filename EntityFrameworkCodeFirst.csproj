@@ -53,6 +53,7 @@
     <Compile Include="Course.cs" />
     <Compile Include="CourseLevel.cs" />
     <Compile Include="Cover.cs" />
+    <Compile Include="EntityConfigurations\CourseConfiguration.cs" />
     <Compile Include="Migrations\201709020739243_InitialFluentApiModel.cs" />
     <Compile Include="Migrations\201709020739243_InitialFluentApiModel.Designer.cs">
       <DependentUpon>201709020739243_InitialFluentApiModel.cs</DependentUpon>
