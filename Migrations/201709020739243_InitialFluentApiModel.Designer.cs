@@ -7,13 +7,13 @@ namespace EntityFrameworkCodeFirst.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddCategoryColumnToCoursesTable : IMigrationMetadata
+    public sealed partial class InitialFluentApiModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddCategoryColumnToCoursesTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialFluentApiModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201708251234292_AddCategoryColumnToCoursesTable"; }
+            get { return "201709020739243_InitialFluentApiModel"; }
         }
         
         string IMigrationMetadata.Source

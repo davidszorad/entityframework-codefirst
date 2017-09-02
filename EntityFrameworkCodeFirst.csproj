@@ -52,37 +52,10 @@
     <Compile Include="Author.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="CourseLevel.cs" />
-    <Compile Include="Migrations\201708250853045_InitialModel.cs" />
-    <Compile Include="Migrations\201708250853045_InitialModel.Designer.cs">
-      <DependentUpon>201708250853045_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251209479_AddCategoriesTable.cs" />
-    <Compile Include="Migrations\201708251209479_AddCategoriesTable.Designer.cs">
-      <DependentUpon>201708251209479_AddCategoriesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251234292_AddCategoryColumnToCoursesTable.cs" />
-    <Compile Include="Migrations\201708251234292_AddCategoryColumnToCoursesTable.Designer.cs">
-      <DependentUpon>201708251234292_AddCategoryColumnToCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251244518_AddDatePublishColumnToCoursesTable.cs" />
-    <Compile Include="Migrations\201708251244518_AddDatePublishColumnToCoursesTable.Designer.cs">
-      <DependentUpon>201708251244518_AddDatePublishColumnToCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251247321_RenameTitleToNameInCoursesTable.cs" />
-    <Compile Include="Migrations\201708251247321_RenameTitleToNameInCoursesTable.Designer.cs">
-      <DependentUpon>201708251247321_RenameTitleToNameInCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251302590_DeleteDatePublishColumnFromCoursesTable.cs" />
-    <Compile Include="Migrations\201708251302590_DeleteDatePublishColumnFromCoursesTable.Designer.cs">
-      <DependentUpon>201708251302590_DeleteDatePublishColumnFromCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251307398_DeleteCategoryColumnFromCoursesTable.cs" />
-    <Compile Include="Migrations\201708251307398_DeleteCategoryColumnFromCoursesTable.Designer.cs">
-      <DependentUpon>201708251307398_DeleteCategoryColumnFromCoursesTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251310133_DeleteCategoriesTable.cs" />
-    <Compile Include="Migrations\201708251310133_DeleteCategoriesTable.Designer.cs">
-      <DependentUpon>201708251310133_DeleteCategoriesTable.cs</DependentUpon>
+    <Compile Include="Cover.cs" />
+    <Compile Include="Migrations\201709020739243_InitialFluentApiModel.cs" />
+    <Compile Include="Migrations\201709020739243_InitialFluentApiModel.Designer.cs">
+      <DependentUpon>201709020739243_InitialFluentApiModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -95,29 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708250853045_InitialModel.resx">
-      <DependentUpon>201708250853045_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251209479_AddCategoriesTable.resx">
-      <DependentUpon>201708251209479_AddCategoriesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251234292_AddCategoryColumnToCoursesTable.resx">
-      <DependentUpon>201708251234292_AddCategoryColumnToCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251244518_AddDatePublishColumnToCoursesTable.resx">
-      <DependentUpon>201708251244518_AddDatePublishColumnToCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251247321_RenameTitleToNameInCoursesTable.resx">
-      <DependentUpon>201708251247321_RenameTitleToNameInCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251302590_DeleteDatePublishColumnFromCoursesTable.resx">
-      <DependentUpon>201708251302590_DeleteDatePublishColumnFromCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251307398_DeleteCategoryColumnFromCoursesTable.resx">
-      <DependentUpon>201708251307398_DeleteCategoryColumnFromCoursesTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251310133_DeleteCategoriesTable.resx">
-      <DependentUpon>201708251310133_DeleteCategoriesTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709020739243_InitialFluentApiModel.resx">
+      <DependentUpon>201709020739243_InitialFluentApiModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
