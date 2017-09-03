@@ -239,6 +239,58 @@ namespace EntityFrameworkCodeFirst
             foreach (var course in filtered)
                 Console.WriteLine(course.Name);
             #endregion
+
+            #region Adding objects
+            var course = new Course
+            {
+                Name = "",
+                Description = "",
+                FullPrice = 0,
+                Level = 1,
+                Author = new Author { Id = 1, Name = "Already existing user" }  //it would create duplicate user and change the Id to different value
+            };
+            context.Courses.Add(course);
+            context.SaveChanges();
+            
+            // using an existing object in the context
+            var author = context.Authors.Single(a => a.Id == 1);
+            var course_wpf = new Course
+            {
+                Name = "",
+                Description = "",
+                FullPrice = 0,
+                Level = 1,
+                Author = author  //most suitable for WPF applications
+            };
+            context.Courses.Add(course_wpf);
+            context.SaveChanges();
+
+            // using foreign key property
+            var course_mvc = new Course
+            {
+                Name = "",
+                Description = "",
+                FullPrice = 0,
+                Level = 1,
+                Author = 1  //better for web applications
+            };
+            context.Courses.Add(course_mvc);
+            context.SaveChanges();
+
+            // it exists but you probably won't need to use it
+            var new_author = new Author { Id = 1, Name = "Brand new user name" };
+            context.Authors.Attach(new_author);
+            var course_alternative = new Course
+            {
+                Name = "",
+                Description = "",
+                FullPrice = 0,
+                Level = 1,
+                Author = new_author
+            };
+            context.Courses.Add(course_alternative);
+            context.SaveChanges();
+            #endregion
         }
     }
 }
