@@ -241,7 +241,7 @@ namespace EntityFrameworkCodeFirst
             #endregion
 
             #region Adding objects
-            var course = new Course
+            var new_course = new Course
             {
                 Name = "",
                 Description = "",
@@ -249,18 +249,18 @@ namespace EntityFrameworkCodeFirst
                 Level = 1,
                 Author = new Author { Id = 1, Name = "Already existing user" }  //it would create duplicate user and change the Id to different value
             };
-            context.Courses.Add(course);
+            context.Courses.Add(new_course);
             context.SaveChanges();
-            
+
             // using an existing object in the context
-            var author = context.Authors.Single(a => a.Id == 1);
+            var existing_author = context.Authors.Single(a => a.Id == 1);
             var course_wpf = new Course
             {
                 Name = "",
                 Description = "",
                 FullPrice = 0,
                 Level = 1,
-                Author = author  //most suitable for WPF applications
+                Author = existing_author  //most suitable for WPF applications
             };
             context.Courses.Add(course_wpf);
             context.SaveChanges();
@@ -272,7 +272,7 @@ namespace EntityFrameworkCodeFirst
                 Description = "",
                 FullPrice = 0,
                 Level = 1,
-                Author = 1  //better for web applications
+                AuthorId = 1  //better for web applications
             };
             context.Courses.Add(course_mvc);
             context.SaveChanges();
@@ -289,6 +289,30 @@ namespace EntityFrameworkCodeFirst
                 Author = new_author
             };
             context.Courses.Add(course_alternative);
+            context.SaveChanges();
+            #endregion
+
+            #region Updating objects
+            var updated_course = context.Courses.Find(4); // Single(c => c.Id == 4) /* in case of composite keys we can pass multuple values like Find(1, 3, 5) */
+            updated_course.Name = "New name";
+            updated_course.AuthorId = 2;
+            context.SaveChanges();
+            #endregion
+
+            #region Removing objects
+            var remove_course = context.Courses.Find(6);
+            context.Courses.Remove(remove_course); //with cascade delete enabled all the related tags will be deleted
+            context.SaveChanges();
+
+
+            /* 
+             * var remove_author = context.Authors.Find(1);
+             * context.Authors.Remove(remove_author); --> it will throw an exception because in CourseConfiguration [WillCascadeOnDelete(false)] there are courses that contain remove_author
+             */
+
+            var remove_author = context.Authors.Include(a => a.Courses).Single(a => a.Id == 1);
+            context.Courses.RemoveRange(remove_author.Courses);
+            context.Authors.Remove(remove_author);
             context.SaveChanges();
             #endregion
         }
