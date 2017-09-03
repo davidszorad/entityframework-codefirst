@@ -54,9 +54,9 @@
     <Compile Include="CourseLevel.cs" />
     <Compile Include="Cover.cs" />
     <Compile Include="EntityConfigurations\CourseConfiguration.cs" />
-    <Compile Include="Migrations\201709020739243_InitialFluentApiModel.cs" />
-    <Compile Include="Migrations\201709020739243_InitialFluentApiModel.Designer.cs">
-      <DependentUpon>201709020739243_InitialFluentApiModel.cs</DependentUpon>
+    <Compile Include="Migrations\201709021647366_InitialModel.cs" />
+    <Compile Include="Migrations\201709021647366_InitialModel.Designer.cs">
+      <DependentUpon>201709021647366_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlutoContext.cs" />
@@ -69,8 +69,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709020739243_InitialFluentApiModel.resx">
-      <DependentUpon>201709020739243_InitialFluentApiModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709021647366_InitialModel.resx">
+      <DependentUpon>201709021647366_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

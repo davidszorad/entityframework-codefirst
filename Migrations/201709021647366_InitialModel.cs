@@ -3,7 +3,7 @@ namespace EntityFrameworkCodeFirst.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialFluentApiModel : DbMigration
+    public partial class InitialModel : DbMigration
     {
         public override void Up()
         {
@@ -17,7 +17,7 @@ namespace EntityFrameworkCodeFirst.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Courses",
+                "dbo.tbl_Course",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -38,7 +38,7 @@ namespace EntityFrameworkCodeFirst.Migrations
                         Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Courses", t => t.Id)
+                .ForeignKey("dbo.tbl_Course", t => t.Id)
                 .Index(t => t.Id);
             
             CreateTable(
@@ -58,7 +58,7 @@ namespace EntityFrameworkCodeFirst.Migrations
                         TagsId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => new { t.CourseId, t.TagsId })
-                .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
+                .ForeignKey("dbo.tbl_Course", t => t.CourseId, cascadeDelete: true)
                 .ForeignKey("dbo.Tags", t => t.TagsId, cascadeDelete: true)
                 .Index(t => t.CourseId)
                 .Index(t => t.TagsId);
@@ -68,17 +68,17 @@ namespace EntityFrameworkCodeFirst.Migrations
         public override void Down()
         {
             DropForeignKey("dbo.CourseTags", "TagsId", "dbo.Tags");
-            DropForeignKey("dbo.CourseTags", "CourseId", "dbo.Courses");
-            DropForeignKey("dbo.Covers", "Id", "dbo.Courses");
-            DropForeignKey("dbo.Courses", "AuthorId", "dbo.Authors");
+            DropForeignKey("dbo.CourseTags", "CourseId", "dbo.tbl_Course");
+            DropForeignKey("dbo.Covers", "Id", "dbo.tbl_Course");
+            DropForeignKey("dbo.tbl_Course", "AuthorId", "dbo.Authors");
             DropIndex("dbo.CourseTags", new[] { "TagsId" });
             DropIndex("dbo.CourseTags", new[] { "CourseId" });
             DropIndex("dbo.Covers", new[] { "Id" });
-            DropIndex("dbo.Courses", new[] { "AuthorId" });
+            DropIndex("dbo.tbl_Course", new[] { "AuthorId" });
             DropTable("dbo.CourseTags");
             DropTable("dbo.Tags");
             DropTable("dbo.Covers");
-            DropTable("dbo.Courses");
+            DropTable("dbo.tbl_Course");
             DropTable("dbo.Authors");
         }
     }

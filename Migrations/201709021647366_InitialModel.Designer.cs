@@ -7,13 +7,13 @@ namespace EntityFrameworkCodeFirst.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialFluentApiModel : IMigrationMetadata
+    public sealed partial class InitialModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialFluentApiModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201709020739243_InitialFluentApiModel"; }
+            get { return "201709021647366_InitialModel"; }
         }
         
         string IMigrationMetadata.Source
