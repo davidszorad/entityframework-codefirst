@@ -11,7 +11,7 @@ namespace EntityFrameworkCodeFirst
 
         public PlutoContext() : base("name=FluentApiConnection")
         {
-
+            this.Configuration.LazyLoadingEnabled = false; //good practise in web applications
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

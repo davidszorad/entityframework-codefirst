@@ -19,7 +19,7 @@ namespace EntityFrameworkCodeFirst
                 orderby c.Name
                 select c;
 
-            foreach (var course in query)
+            foreach (var course in csharp_query)
                 Console.WriteLine(course.Name);
 
             // Extension methods
@@ -27,7 +27,7 @@ namespace EntityFrameworkCodeFirst
                 .Where(c => c.Name.Contains("c#"))
                 .OrderBy(c => c.Name);
 
-            foreach (var course in courses)
+            foreach (var course in csharp_courses)
                 Console.WriteLine(course.Name);
 
 
