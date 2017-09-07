@@ -12,7 +12,7 @@ namespace EntityFrameworkCodeFirst
         {
             var context = new PlutoContext();
 
-            // LINQ syntax
+            // LINQ Query Operators
             var csharp_query =
                 from c in context.Courses
                 where c.Name.Contains("c#")
@@ -31,7 +31,7 @@ namespace EntityFrameworkCodeFirst
                 Console.WriteLine(course.Name);
 
 
-            #region LINQ syntax
+            #region LINQ Query Operators
             var multiple_conditions_query =
                 from c in context.Courses
                 where c.Level == 1 && c.Author.Id == 1
